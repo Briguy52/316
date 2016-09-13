@@ -2,6 +2,8 @@
 
 ## ra 
 
+[ra halp](https://sites.duke.edu/compsci316_01_f2016/help/ra/)
+
 #### commands to run
 
 ```
@@ -17,14 +19,14 @@ EXP_1 \intersect EXP_2: intersection between two expressions
 
 
 \list;  lists available tables
------
+
 bar
 beer
 drinker
 frequents
 likes
 serves
------
+
 Total of 6 table(s) found.
 
 ```
