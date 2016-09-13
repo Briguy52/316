@@ -2,6 +2,8 @@
 
 ## ra 
 
+> [course website](https://sites.duke.edu/compsci316_01_f2016/)
+
 > [ra halp](https://sites.duke.edu/compsci316_01_f2016/help/ra/)
 
 #### commands to run
@@ -33,4 +35,8 @@ serves
 
 Total of 6 table(s) found.
 
+select_{name = 'James Joyce Pub'} bar; // selects bar with name 'James Joyce Pub'
+
 ```
+
+
