@@ -59,3 +59,10 @@ DONE!
 
 #### b
 
+```
+bar \join
+\rename_{name} \project_{bar} ( 
+  \select_{price <= 2.25} serves 
+);
+
+```
