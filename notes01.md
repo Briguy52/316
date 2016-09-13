@@ -65,4 +65,27 @@ bar \join
   \select_{price <= 2.25} serves 
 );
 
+Talk of the Town|108 E. Main Street
+Down Under Pub|802 W. Main Street
+Satisfaction|905 W. Main Street
+
+```
+
+#### c
+
+```
+
+bar \join
+\rename_{name} 
+\project_{bar} (
+\project_{beer} (
+  \select_{drinker = 'Amy'} likes
+)
+
+\join 
+
+\project_{bar, beer} (
+  \select_{price <= 2.50} serves 
+  )
+);
 ```
