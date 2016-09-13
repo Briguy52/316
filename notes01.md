@@ -94,10 +94,11 @@ Talk of the Town|108 E. Main Street
 #### d
 
 ```
+\project_{drinkerA, drinkerB} (
 \rename_{drinkerA, beerA} likes 
   \join_{beerA = beerB and drinkerA != drinkerB}
-\rename_{drinkerB, beerB} likes; 
-
+\rename_{drinkerB, beerB} likes
+);
 ```
 
 how remove duplicates?
