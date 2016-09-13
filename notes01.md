@@ -35,8 +35,27 @@ serves
 
 Total of 6 table(s) found.
 
-select_{name = 'James Joyce Pub'} bar; // selects bar with name 'James Joyce Pub'
-
 ```
 
+#### a
+
+```
+\select_{bar = 'James Joyce Pub'} serves;
+
+James Joyce Pub|Amstel|3.00
+James Joyce Pub|Corona|3.25
+James Joyce Pub|Dixie|3.00
+James Joyce Pub|Erdinger|3.50
+
+\project_{beer} (\select_{bar = 'James Joyce Pub'} serves);
+
+Amstel
+Corona
+Dixie
+Erdinger
+```
+
+DONE!
+
+#### b
 
