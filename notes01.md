@@ -2,13 +2,17 @@
 
 ## ra 
 
-[ra halp](https://sites.duke.edu/compsci316_01_f2016/help/ra/)
+> [ra halp](https://sites.duke.edu/compsci316_01_f2016/help/ra/)
 
 #### commands to run
 
 ```
 \help;  halp
 
+Relational algebra expressions:
+R: relation named by R
+\select_{COND} EXP: selection over an expression
+\project_{ATTR_LIST} EXP: projection of an expression
 EXP_1 \join EXP_2: natural join between two expressions
 EXP_1 \join_{COND} EXP_2: theta-join between two expressions
 EXP_1 \cross EXP_2: cross-product between two expressions
