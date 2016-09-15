@@ -94,6 +94,7 @@ Talk of the Town|108 E. Main Street
 #### d
 
 ```
+\select_{drinkerA < drinkerB}
 \project_{drinkerA, drinkerB} (
 \rename_{drinkerA, beerA} likes 
   \join_{beerA = beerB and drinkerA != drinkerB}
@@ -101,4 +102,22 @@ Talk of the Town|108 E. Main Street
 );
 ```
 
-how remove duplicates?
+how remove duplicates? use a select to choose first name < second name (thanks david!!)
+
+#### e 
+
+```
+\rename_{dBar} 
+\project_{bar} (
+\select_{beer = 'Dixie'} serves
+)
+
+\join_{dbar != bar}
+
+\project_{drinker, bar} (
+frequents \join 
+\project_{drinker} (
+\select_{beer = 'Dixie'} likes
+)
+);
+```
