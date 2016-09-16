@@ -62,7 +62,7 @@ DONE!
 ```
 bar \join
 \rename_{name} \project_{bar} ( 
-  \select_{price <= 2.25} serves 
+  \select_{price < 2.25} serves 
 );
 
 Talk of the Town|108 E. Main Street
