@@ -72,6 +72,7 @@ Talk of the Town|108 E. Main Street
 #### c
 
 ```
+\project_{name} (
 bar \join
 \rename_{name} 
 \project_{bar} (
@@ -84,6 +85,7 @@ bar \join
 \project_{bar, beer} (
   \select_{price <= 2.50} serves 
   )
+)
 );
 
 Talk of the Town|108 E. Main Street
@@ -132,6 +134,8 @@ Dan|The Edge
 #### f
 
 ```
-
+\rename_{drinker1, bar1, times1} frequents 
+  \join_{drinker1 = drinker2 and bar1 = bar2 and times1 > times2}
+\rename_{drinker2, bar2, times2} frequents;
 
 ```
