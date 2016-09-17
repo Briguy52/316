@@ -164,3 +164,15 @@ Ben|Satisfaction|2
 
 ```
 DONE
+
+#### g
+
+```
+likes \join \project_{bar, beer} (serves) \join \project_{drinker, bar} (frequents);
+
+// get bars that serve beer that person likes
+
+
+
+
+```
