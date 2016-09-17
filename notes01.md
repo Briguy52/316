@@ -135,7 +135,7 @@ Dan|The Edge
 
 ```
 \rename_{drinker1, bar1, times1} frequents 
-  \join_{drinker1 = drinker2 and bar1 = bar2 and times1 > times2}
+  \join_{drinker1 = drinker2 and bar1 = bar2 and time1<time2}
 \rename_{drinker2, bar2, times2} frequents;
 
 ```
