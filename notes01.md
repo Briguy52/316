@@ -134,21 +134,25 @@ Dan|The Edge
 #### f
 
 ```
-// people with more than one favorite
-\project_{drinker1, bar2} (
-\rename_{drinker, bar, times} frequents 
-  \join_{drinker = drinker0} 
-\rename_{drinker0, bar0, times0} frequents 
 
-\diff
+frequents
+\diff 
 (
+\project_{drinker1, bar1, times1} (
 \rename_{drinker1, bar1, times1} frequents 
   \join_{drinker1 = drinker2 and times1 < times2}
 \rename_{drinker2, bar2, times2} frequents
+)
 );
 
-)
-
-
+Dan|Satisfaction|2
+Dan|Down Under Pub|2
+Amy|James Joyce Pub|2
+Coy|The Edge|1
+Coy|Down Under Pub|1
+Eve|James Joyce Pub|2
+Dan|Talk of the Town|2
+Ben|Satisfaction|2
 
 ```
+DONE
