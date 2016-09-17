@@ -110,7 +110,7 @@ how remove duplicates? use a select to choose first name < second name (thanks d
 \select_{beer = 'Dixie'} serves
 )
 
-\join_{dbar != bar}
+\join_{dBar != bar}
 
 \project_{drinker, bar} (
 frequents \join 
@@ -118,4 +118,20 @@ frequents \join
 \select_{beer = 'Dixie'} likes
 )
 );
+
+Coy|Down Under Pub !!!
+Coy|The Edge !!!
+Dan|Down Under Pub
+Dan|James Joyce Pub
+Dan|Satisfaction
+Dan|Talk of the Town
+Dan|The Edge
+
+```
+
+#### f
+
+```
+
+
 ```
