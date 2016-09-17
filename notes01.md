@@ -134,8 +134,21 @@ Dan|The Edge
 #### f
 
 ```
+// people with more than one favorite
+\project_{drinker1, bar2} (
+\rename_{drinker, bar, times} frequents 
+  \join_{drinker = drinker0} 
+\rename_{drinker0, bar0, times0} frequents 
+
+\diff
+(
 \rename_{drinker1, bar1, times1} frequents 
-  \join_{drinker1 = drinker2 and bar1 = bar2 and time1<time2}
-\rename_{drinker2, bar2, times2} frequents;
+  \join_{drinker1 = drinker2 and times1 < times2}
+\rename_{drinker2, bar2, times2} frequents
+);
+
+)
+
+
 
 ```
