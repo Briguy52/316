@@ -107,29 +107,37 @@ how remove duplicates? use a select to choose first name < second name (thanks d
 #### e 
 
 ```
-\rename_{dBar} 
+
+\project_{drinker} (
+frequents \join 
+\project_{drinker} (
+\select_{beer = 'Dixie'} likes
+)
+)
+
+\diff
+
+\project_{drinker} (
+
 \project_{bar} (
 \select_{beer = 'Dixie'} serves
 )
 
-\join_{dBar != bar}
+\join
 
 \project_{drinker, bar} (
 frequents \join 
 \project_{drinker} (
 \select_{beer = 'Dixie'} likes
 )
+)
 );
 
-Coy|Down Under Pub !!!
-Coy|The Edge !!!
-Dan|Down Under Pub
-Dan|James Joyce Pub
-Dan|Satisfaction
-Dan|Talk of the Town
-Dan|The Edge
+Coy
 
 ```
+
+DONE!!!
 
 #### f
 
