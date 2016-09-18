@@ -97,11 +97,10 @@ Talk of the Town|108 E. Main Street
 \select_{drinkerA < drinkerB}
 \project_{drinkerA, drinkerB} (
 \rename_{drinkerA, beerA} likes 
-  \join_{beerA = beerB and drinkerA != drinkerB}
+  \join_{beerA = beerB}
 \rename_{drinkerB, beerB} likes
 );
 ```
-
 how remove duplicates? use a select to choose first name < second name (thanks david!!)
 
 #### e 
