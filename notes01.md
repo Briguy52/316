@@ -186,3 +186,15 @@ Dan
 DONE!
 
 #### h
+
+```
+\rename_{drinker} \project_{name} (drinker) \diff 
+
+\project_{drinker} (
+(
+(\project_{drinker, bar} (likes \join \project_{bar, beer} (serves)))
+\diff 
+\project_{drinker, bar} frequents 
+)
+);
+```
