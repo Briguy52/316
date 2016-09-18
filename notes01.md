@@ -168,11 +168,22 @@ DONE
 #### g
 
 ```
-likes \join \project_{bar, beer} (serves) \join \project_{drinker, bar} (frequents);
+\rename_{drinker} \project_{name} (drinker) \diff 
 
-// get bars that serve beer that person likes
+\project_{drinker} (
+(\project_{drinker, bar} frequents 
+\diff (\project_{drinker, bar} (likes \join \project_{bar, beer} (serves)
+)
+)
+)
+);
 
-
-
-
+Ben
+Amy
+Eve
+Dan
 ```
+
+DONE!
+
+#### h
