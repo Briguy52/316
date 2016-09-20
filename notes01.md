@@ -88,7 +88,7 @@ bar \join
 )
 );
 
-Talk of the Town|108 E. Main Street
+Talk of the Town
 ```
 
 #### d
