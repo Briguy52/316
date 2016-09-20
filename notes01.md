@@ -100,6 +100,14 @@ Talk of the Town|108 E. Main Street
   \join_{beerA = beerB}
 \rename_{drinkerB, beerB} likes
 );
+
+Amy|Eve
+Coy|Dan
+Amy|Ben
+Ben|Eve
+Amy|Dan
+Dan|Eve
+Ben|Dan
 ```
 how remove duplicates? use a select to choose first name < second name (thanks david!!)
 
