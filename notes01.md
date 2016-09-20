@@ -149,7 +149,7 @@ DONE!!!
 #### f
 
 ```
-
+\project_{drinker, bar} (
 frequents
 \diff 
 (
@@ -158,16 +158,18 @@ frequents
   \join_{drinker1 = drinker2 and times1 < times2}
 \rename_{drinker2, bar2, times2} frequents
 )
+)
 );
 
-Dan|Satisfaction|2
-Dan|Down Under Pub|2
-Amy|James Joyce Pub|2
-Coy|The Edge|1
-Coy|Down Under Pub|1
-Eve|James Joyce Pub|2
-Dan|Talk of the Town|2
-Ben|Satisfaction|2
+Coy|The Edge
+Dan|Down Under Pub
+Dan|Satisfaction
+Dan|Talk of the Town
+Ben|Satisfaction
+Eve|James Joyce Pub
+Coy|Down Under Pub
+Amy|James Joyce Pub
+
 
 ```
 DONE
