@@ -45,25 +45,27 @@ WHERE serves.price<2.5 AND likes.drinker='Amy'
 d. 
 
 ```
-SELECT l1.drinker AS drinker1, l2.drinker AS drinker2 
+SELECT DISTINCT l1.drinker AS drinker1, l2.drinker AS drinker2 
 FROM likes AS l1, likes AS l2
 WHERE l1.beer = l2.beer AND l1.drinker != l2.drinker AND l1.drinker > l2.drinker
 
  drinker1 | drinker2 
 ----------+----------
- Ben      | Amy
- Dan      | Ben
- Dan      | Amy
- Dan      | Ben
- Dan      | Amy
  Dan      | Coy
+ Dan      | Ben
  Eve      | Dan
  Eve      | Ben
+ Dan      | Amy
+ Ben      | Amy
  Eve      | Amy
- Eve      | Dan
- Eve      | Amy
-(11 rows)
+(7 rows)
 
 ```
 
 e. 
+
+```
+SELECT likes.drinker
+FROM likes, frequents
+
+```
