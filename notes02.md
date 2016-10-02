@@ -66,6 +66,11 @@ e.
 
 ```
 SELECT likes.drinker
-FROM likes, frequents
-
+FROM likes
+WHERE likes.beer='Dixie'
+EXCEPT ALL
+SELECT DISTINCT frequents.drinker
+FROM frequents, seres
+WHERE serves.beer='Dixie'
+AND freqents.bar = serves.bar;
 ```
