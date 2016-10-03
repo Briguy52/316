@@ -74,3 +74,26 @@ FROM frequents, seres
 WHERE serves.beer='Dixie'
 AND freqents.bar = serves.bar;
 ```
+
+f.
+
+```
+SELECT *
+FROM frequents 
+EXCEPT ALL
+SELECT DISTINCT f1.drinker, f1.bar, f1.times_a_week
+FROM frequents AS f1, frequents AS f2
+WHERE f1.drinker = f2.drinker AND f1.times_a_week < f2.times_a_week;
+
+ drinker |       bar        | times_a_week 
+---------+------------------+--------------
+ Dan     | Satisfaction     |            2
+ Dan     | Down Under Pub   |            2
+ Amy     | James Joyce Pub  |            2
+ Coy     | The Edge         |            1
+ Coy     | Down Under Pub   |            1
+ Eve     | James Joyce Pub  |            2
+ Dan     | Talk of the Town |            2
+ Ben     | Satisfaction     |            2
+(8 rows)
+```
