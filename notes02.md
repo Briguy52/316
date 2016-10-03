@@ -97,3 +97,19 @@ WHERE f1.drinker = f2.drinker AND f1.times_a_week < f2.times_a_week;
  Ben     | Satisfaction     |            2
 (8 rows)
 ```
+
+g. 
+Find names of all drinkers who frequent only those bars that serve some beers they like.
+
+all drinkers in frequent - people who go to bars that serve stuff they like = people who go to bars they don't like
+all drinkers - above = answer
+
+```
+SELECT DISTINCT frequents.drinker, frequents.bar
+FROM frequents
+EXCEPT ALL
+
+SELECT DISTINCT likes.drinker, serves.bar
+FROM serves, likes, frequents
+WHERE serves.beer = likes.beer AND serves.bar = frequents.bar;
+```
