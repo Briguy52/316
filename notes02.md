@@ -156,11 +156,25 @@ FROM frequents
 i.
 
 ```
-SELECT temp.bar, temp.count
+SELECT *
 FROM 
+(SELECT temp.bar, temp.count, AVG(serves.price)
+FROM serves,
 (SELECT frequents.bar, COUNT(*)
 FROM frequents, bar
 GROUP BY frequents.bar, bar.name
 HAVING frequents.bar=bar.name) AS temp
-ORDER BY temp.count desc
+GROUP BY temp.bar, temp.count, serves.bar
+HAVING serves.bar=temp.bar) AS temp2
+ORDER BY temp2.count DESC
+
+       bar        | count |        avg         
+------------------+-------+--------------------
+ James Joyce Pub  |     4 | 3.1875000000000000
+ Down Under Pub   |     2 | 2.6666666666666667
+ Satisfaction     |     2 | 2.6500000000000000
+ Talk of the Town |     2 | 2.3500000000000000
+ The Edge         |     2 | 2.7500000000000000
+(5 rows)
+
 ```
