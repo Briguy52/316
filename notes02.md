@@ -152,3 +152,13 @@ FROM frequents
  Dan
 (1 row)
 ```
+
+i.
+
+```
+SELECT frequents.bar, COUNT(*)
+FROM frequents, bar
+GROUP BY frequents.bar, bar.name
+HAVING frequents.bar=bar.name
+
+```
