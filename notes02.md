@@ -156,9 +156,11 @@ FROM frequents
 i.
 
 ```
-SELECT frequents.bar, COUNT(*)
+SELECT temp.bar, temp.count
+FROM 
+(SELECT frequents.bar, COUNT(*)
 FROM frequents, bar
 GROUP BY frequents.bar, bar.name
-HAVING frequents.bar=bar.name
-
+HAVING frequents.bar=bar.name) AS temp
+ORDER BY temp.count desc
 ```
