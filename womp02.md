@@ -38,4 +38,34 @@ Pokemon
 
 (e) Using triggers, enforce that Pokemon.quick_move and Pokemon.charged_move indeed refer to moves of the (e) Using triggers, enforce that Pokemon.quick_move and Pokemon.charged_move indeed refer to moves of the 
 
+- [ ] How do you reference foreign keys? 
 
+```
+CREATE TRIGGER EnforceQuick
+  BEFORE INSERT OR UPDATE ON Pokemon
+  FOR EACH ROW
+  WHEN (Pokemon.quick_move.type != 'quick')
+  SET Pokemon.quick_move.type = 'quick';
+  
+CREATE TRIGGER EnforceCharged
+  BEFORE INSERT OR UPDATE ON Pokemon
+  FOR EACH ROW
+  WHEN (Pokemon.charged_move.type != 'charged')
+  SET Pokemon.charged_move.type = 'charged';
+```
+
+(f) Write an INSERT statement that fails because a Pokemon refers to a non-existent move.
+
+(g) Write an INSERT statement that fails because of violating (b).
+
+(h) Write two INSERT statements that fail because of violating constraints in (c) on Species and Pokemon, 
+
+(i) Write two UPDATE statements that fail because of violating the two cases under (d), respectively.
+
+check this one
+
+(j) Write an INSERT statement that fails because of violating (e).
+
+(k) Write an UPDATE Move statement that fails because of violating (e).
+
+(l) Define a view that lists, for each Pokemon, its combat power (CP), defined as follows:(l) Define a view that lists, for each Pokemon, its combat power (CP), defined as follows:
