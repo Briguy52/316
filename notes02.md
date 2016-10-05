@@ -16,30 +16,25 @@ b.
 ```
 SELECT bar.name, bar.address
 FROM serves, bar
-WHERE serves.price<2.25 AND serves.beer=bar.beer
+WHERE serves.price<2.25 AND serves.bar=bar.name
 
        name       |      address       
 ------------------+--------------------
- Down Under Pub   | 802 W. Main Street
- The Edge         | 108 Morris Street
- James Joyce Pub  | 912 W. Main Street
- Satisfaction     | 905 W. Main Street
  Talk of the Town | 108 E. Main Street
+(1 row)
+
 ```
 
 c. 
 ```
 SELECT DISTINCT bar.name
 FROM likes, serves, bar
-WHERE serves.price<2.5 AND likes.drinker='Amy' AND serves.beer=likes.beer 
+WHERE serves.price<=2.5 AND likes.drinker='Amy' AND likes.beer = serves.beer AND bar.name = serves.bar 
 
        name       
 ------------------
- Satisfaction
- The Edge
  Talk of the Town
- Down Under Pub
- James Joyce Pub
+(1 row)
 ```
 
 d. 
@@ -69,10 +64,9 @@ SELECT likes.drinker
 FROM likes
 WHERE likes.beer='Dixie'
 EXCEPT ALL
-SELECT DISTINCT frequents.drinker
-FROM frequents, seres
-WHERE serves.beer='Dixie'
-AND freqents.bar = serves.bar;
+(SELECT DISTINCT frequents.drinker
+FROM frequents, serves
+WHERE serves.beer='Dixie'AND frequents.bar = serves.bar);
 ```
 
 f.
