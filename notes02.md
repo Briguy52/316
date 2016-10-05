@@ -81,6 +81,16 @@ f.
 SELECT *
 FROM frequents 
 EXCEPT ALL
+
+
+SELECT DISTINCT f1.drinker, f1.bar, f1.times_a_week
+FROM frequents AS f1, frequents AS f2
+WHERE f1.drinker = f2.drinker AND f1.times_a_week < f2.times_a_week;
+
+
+SELECT *
+FROM frequents 
+EXCEPT ALL
 SELECT DISTINCT f1.drinker, f1.bar, f1.times_a_week
 FROM frequents AS f1, frequents AS f2
 WHERE f1.drinker = f2.drinker AND f1.times_a_week < f2.times_a_week;
