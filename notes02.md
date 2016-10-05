@@ -16,7 +16,7 @@ b.
 ```
 SELECT bar.name, bar.address
 FROM serves, bar
-WHERE serves.price<2.25;
+WHERE serves.price<2.25 AND serves.beer=bar.beer
 
        name       |      address       
 ------------------+--------------------
@@ -31,7 +31,7 @@ c.
 ```
 SELECT DISTINCT bar.name
 FROM likes, serves, bar
-WHERE serves.price<2.5 AND likes.drinker='Amy'
+WHERE serves.price<2.5 AND likes.drinker='Amy' AND serves.beer=likes.beer 
 
        name       
 ------------------
